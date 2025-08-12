@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_12/profile.dart';
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -13,34 +14,19 @@ class _homepageState extends State<homepage> {
   int _selectedIndex = 0;
 
   final List <Widget> pages = [
-    Center(child: Container(
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Container(
-                height: 50,
-                width: 100,
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              )
-            ],
-          )
-        ],
-      ),
-    )),
+    Center(child: Padding(padding: EdgeInsets.all(11),)),
     Center(child: Text('ini halaman Bookmark'),),
     Center(child: Text('ini halaman Cart'),),
-    Center(child: Text('ini halaman profil'),),
+    Center(child:
+    Profil()
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('home page'),
+        title: const Text('iuran'),
       ),
       body: pages[_selectedIndex],
       bottomNavigationBar: NavigationBar(
